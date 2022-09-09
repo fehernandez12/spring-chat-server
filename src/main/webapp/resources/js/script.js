@@ -62,7 +62,7 @@ const showMessageOutput = (messageOutput, image) => {
     var response = document.getElementById('response');
     var messageDiv = document.createElement('div');
     messageDiv.classList.add(['alert']);
-    messageDiv.classList.add(['alert-info']);
+    messageDiv.classList.add(['alert-dark']);
     messageDiv.style.wordWrap = 'break-word';
     messageDiv.appendChild(createMessageNode(messageOutput.from, messageOutput.text, messageOutput.time, image));
     response.appendChild(messageDiv);
