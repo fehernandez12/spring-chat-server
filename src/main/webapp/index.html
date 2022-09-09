@@ -1,0 +1,48 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Chat Distribuidos</title>
+    <link rel="stylesheet" href="resources/css/bootstrap.css">
+    <link rel="stylesheet" href="resources/css/styles.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="resources/js/sockjs-0.3.4.js"></script>
+    <script src="resources/js/stomp.js"></script>
+    <script src="resources/js/script.js"></script>
+</head>
+<body onload="disconnect()">
+<div class="container">
+    <div class="row mt-5">
+        <h1>Ingresa tu nickname para conectarte.</h1>
+        <hr>
+        <div class="col">
+            <input type="text" id="from" class="form-control" placeholder="Nickname" />
+        </div>
+        <div class="col d-flex flex-row justify-content-evenly mb-3">
+            <button id="connect" class="btn btn-primary" onclick="connect();">Conectar</button>
+            <button id="disconnect" class="btn btn-danger" disabled="disabled" onclick="disconnect();">Desconectar</button>
+        </div>
+        <hr>
+    </div>
+    <div class="row">
+        <div class="col" id="conversation">
+            <div class="mb-3">
+                <h1 id="announcement"></h1>
+            </div>
+            <div class="mb-3">
+                <input type="text" id="text" class="form-control" placeholder="Escribe un mensaje..." />
+            </div>
+            <div class="mb-3">
+                <label for="image" class="form-label">Default file input example</label>
+                <input class="form-control" type="file" id="image">
+            </div>
+            <div class="mb-3">
+                <button id="sendMessage" class="btn btn-info" onclick="sendMessage();">Enviar</button>
+            </div>
+            <hr>
+            <div class="px-3" id="response"></div>
+        </div>
+    </div>
+</div>
+<script src="resources/js/bootstrap.bundle.js"></script>
+</body>
+</html>
