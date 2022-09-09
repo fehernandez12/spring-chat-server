@@ -24,4 +24,4 @@ Debido a que la aplicación contiene un frontend básico, este se encuentra en u
 >* Archivo `index.html`
 >* Carpeta resources: Contiene los archivos de estilos y Javascript del proyecto.
 
-La conexión al Websocket se realiza en el archivo `resources/script.js`.
+La conexión al Websocket y el envío de peticiones se realizan en el archivo `resources/script.js`.
